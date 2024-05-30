@@ -1,9 +1,9 @@
-import TodoComponent from "./components/TodoComponent";
+import Layout from "./components/layout/Layout";
 
 const App = () => {
 	return (
 		<>
-			<TodoComponent />
+			<Layout />
 		</>
 	);
 };
