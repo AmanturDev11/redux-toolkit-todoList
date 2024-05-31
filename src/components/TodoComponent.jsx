@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import { useState } from "react";
 // import { useDispatch, useSelector } from "react-redux";
 // import { addTodo, deleteAll, deleteTodo } from "../redux/tools/todoSlice";
@@ -74,8 +75,9 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodo, deleteAll, deleteTodo } from "../redux/tools/todoSlice";
+import { LoginMap } from "./login/LoginMap";
 
-const TodoComponent = () => {
+const TodoComponent = ({ cards, getTodos }) => {
 	const [name, setName] = useState("");
 	const [age, setAge] = useState(0);
 	const todos = useSelector((state) => state.todos.data);
@@ -120,6 +122,7 @@ const TodoComponent = () => {
 	return (
 		<>
 			<div>
+				<LoginMap cards={cards} getTodos={getTodos} />
 				<input
 					type="text"
 					value={name}
